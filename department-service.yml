@@ -1,0 +1,19 @@
+server:
+  port: 8085
+
+spring:
+   application:
+      name: department-service
+
+   data:
+        mongodb:
+            database: Departments_DB
+            host: localhost
+            port: 27017      
+
+
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8084/eureka
