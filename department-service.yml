@@ -4,6 +4,8 @@ server:
 spring:
    application:
       name: department-service
+   config:
+      import: optional:configserver:http://localhost:8888
 
    data:
         mongodb:
@@ -18,4 +20,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8084/eureka
       
-message: Hello, Umesh      
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+                               
+     
+message: Hello, Akash    
